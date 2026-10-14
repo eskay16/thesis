@@ -76,7 +76,11 @@
           }
         },
         "type": "object",
-        "required": ["id", "customer_name", "amount"],
+        "required": [
+          "id",
+          "customer_name",
+          "amount"
+        ],
         "title": "User"
       },
       "ValidationError": {
@@ -112,7 +116,11 @@
           }
         },
         "type": "object",
-        "required": ["loc", "msg", "type"],
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
         "title": "ValidationError"
       }
     }

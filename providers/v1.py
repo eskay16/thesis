@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 app = FastAPI()
 
+
 class User(BaseModel):
     id: int
     customer_name: str
@@ -35,3 +36,6 @@ def get_user(user_id: int) -> User:
     raise HTTPException(status_code=404, detail="User not found")
 
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("providers.v1:app", host="127.0.0.1", port=8001, reload=True)
